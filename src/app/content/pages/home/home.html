@@ -1,13 +1,19 @@
 <div id="homeContainer">
-  <h1 class="title">Qui suis-je ?</h1>
+  <h1 class="title" *ngIf="langService.isFr">Qui suis-je ?</h1>
+  <h1 class="title" *ngIf="langService.isEn">Who am I?</h1>
   <div id="firstLine">
     <img src="assets/_photo%20de%20profil.jpg"/>
     <div id="textContainer">
-      <p>
+      <p *ngIf="langService.isFr">
         Bonjour, je suis Arnaud ALET.<br/><br/>
         Étudiant et passionné d'informatique depuis petit, j'ai pour objectif de poursuivre dans cette voie de
         l'informatique et du développement.<br/><br/>
         Autodidacte et hétérodidacte je continue de découvrir de nouvelles notions et nouveaux domaines tout les jours.<br/><br/><a routerLink="/me">En savoir plus &#8594;</a>
+      </p>
+      <p *ngIf="langService.isEn">
+        Hello, I am Arnaud ALET.<br/><br/>
+        As a student who has been passionate about computer science since childhood, my goal is to continue on this path of computer science and software development.<br/><br/>
+        Self-taught and always eager to learn, I continue to discover new concepts and fields every single day.<br/><br/><a routerLink="/me">Learn more &#8594;</a>
       </p>
     </div>
   </div>

@@ -3,56 +3,83 @@
         <img id="profilIcon" src="assets/_photo%20de%20profil.jpg"/>
         <p>Arnaud ALET</p>
     </div>
-    <h1 class="title">
+    
+    <h1 class="title" *ngIf="langService.isFr">
         • Formations & Expériences
     </h1>
-    <div id="formations">
-        <p class="xpHeader"><span class="greenDot"></span><span class="title">Master - MoSIG</span> - depuis
-            2025 - Promo 2027</p>
-        <p style="line-height: 40px">Master of Science in Informatics at Grenoble.<br>Double dîplome - Master
-            international en Anglais.</p>
+    <h1 class="title" *ngIf="langService.isEn">
+        • Education & Experience
+    </h1>
+    
+    <div id="formations" *ngIf="langService.isFr">
+        <p class="xpHeader"><span class="greenDot"></span><span class="title">Master - MoSIG</span> - depuis 2025 - Promo 2027</p>
+        <p style="line-height: 40px">Master of Science in Informatics at Grenoble.<br>Double diplôme - Master international en Anglais.</p>
         <hr>
-        <p class="xpHeader"><span class="greenDot"></span><span class="title">Dîplome Ingénieur - Ensimag</span> -
-            depuis 2024 - Promo 2027</p>
-        <p style="line-height: 40px">Etudiant à l'Ensimag - Grenoble INP.</p>
+        <p class="xpHeader"><span class="greenDot"></span><span class="title">Diplôme Ingénieur - Ensimag</span> - depuis 2024 - Promo 2027</p>
+        <p style="line-height: 40px">Étudiant à l'Ensimag - Grenoble INP.</p>
         <hr>
-        <p class="xpHeader"><span class="greenDot"></span><span class="title">BugBuster</span> - Job étudiant - depuis
-            2024 - 1 ans et 6 mois</p>
-        <p style="line-height: 40px">Etudiant associé à l'Ensimag.<br>Maintenance informatique sur le matériel
-            de l’école et sur le matériel personnel des étudiants.</p>
+        <p class="xpHeader"><span class="greenDot"></span><span class="title">BugBuster</span> - Job étudiant - depuis 2024 - 1 an et 6 mois</p>
+        <p style="line-height: 40px">Étudiant associé à l'Ensimag.<br>Maintenance informatique sur le matériel de l’école et sur le matériel personnel des étudiants.</p>
         <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Stage de recherche</span> -
-            2026 -
-            4 mois</p>
+        <p class="xpHeader"><span class="grayDot"></span><span class="title">Stage de recherche</span> - 2026 - 4 mois</p>
         <p style="line-height: 40px">Stage de recherche au Laboratoire d'Informatique de Grenoble (<a href="https://www.liglab.fr/">LIG</a>).<br>
             Amélioration d'algorithmes de recherche 2D avec des prédictions. Voir dans <a routerLink="/my-projects">mes projets</a>.</p>
         <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Stage AI</span> -
-            2025 -
-            2 mois</p>
-        <p style="line-height: 40px">Stage Assistant Ingénieur chez <a href="https://www.agedi.fr/">AGEDI</a>.<br>Développement
-            web full stack (Spring, Angular, PostegreSQL).</p>
+        <p class="xpHeader"><span class="grayDot"></span><span class="title">Stage AI</span> - 2025 - 2 mois</p>
+        <p style="line-height: 40px">Stage Assistant Ingénieur chez <a href="https://www.agedi.fr/">AGEDI</a>.<br>Développement web full stack (Spring, Angular, PostgreSQL).</p>
         <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Stage Laboratoire de Recherche</span> -
-            2023 -
-            1 mois et demi</p>
-        <p>Stage d'excellence au Laboratoire d'Informatique de Grenoble (<a href="https://www.liglab.fr/">LIG</a>), voir
-            dans <a routerLink="/my-projects">mes projets</a>.</p>
+        <p class="xpHeader"><span class="grayDot"></span><span class="title">Stage Laboratoire de Recherche</span> - 2023 - 1 mois et demi</p>
+        <p>Stage d'excellence au Laboratoire d'Informatique de Grenoble (<a href="https://www.liglab.fr/">LIG</a>), voir dans <a routerLink="/my-projects">mes projets</a>.</p>
         <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Prépa Intégrée</span> - 2022-2024 - 2 ans
-        </p>
+        <p class="xpHeader"><span class="grayDot"></span><span class="title">Prépa Intégrée</span> - 2022-2024 - 2 ans</p>
         <p>Prépa intégrée à Polytech Grenoble (L2 MIN au DLST - UGA).</p>
         <hr>
         <p class="xpHeader"><span class="grayDot"></span><span class="title">Baccalauréat</span> - 2022</p>
         <p>Spécialité Mathématiques, Physique Chimie.<br>Option Maths Expertes.</p>
         <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Site W</span> - 2018 - 1 mois </p>
+        <p class="xpHeader"><span class="grayDot"></span><span class="title">Site W</span> - 2018 - 1 mois</p>
         <p>Réalisation d'un stage chez <a href="https://sitew.com">Site W</a>.</p>
         <hr>
     </div>
-    <h1 class="title">
+
+    <div id="formations" *ngIf="langService.isEn">
+        <p class="xpHeader"><span class="greenDot"></span><span class="title">Master - MoSIG</span> - since 2025 - Class of 2027</p>
+        <p style="line-height: 40px">Master of Science in Informatics at Grenoble.<br>Double degree - International Master taught in English.</p>
+        <hr>
+        <p class="xpHeader"><span class="greenDot"></span><span class="title">Engineering Degree - Ensimag</span> - since 2024 - Class of 2027</p>
+        <p style="line-height: 40px">Student at Ensimag - Grenoble INP.</p>
+        <hr>
+        <p class="xpHeader"><span class="greenDot"></span><span class="title">BugBuster</span> - Student Job - since 2024 - 1 year & 6 months</p>
+        <p style="line-height: 40px">Student assistant at Ensimag.<br>Hardware and software support for the school and students' personal devices.</p>
+        <hr>
+        <p class="xpHeader"><span class="grayDot"></span><span class="title">Research Internship</span> - 2026 - 4 months</p>
+        <p style="line-height: 40px">Research internship at the Grenoble Informatics Laboratory (<a href="https://www.liglab.fr/">LIG</a>).<br>
+            Improving 2D search algorithms with predictions. See in <a routerLink="/my-projects">my projects</a>.</p>
+        <hr>
+        <p class="xpHeader"><span class="grayDot"></span><span class="title">Assistant Engineer Internship</span> - 2025 - 2 months</p>
+        <p style="line-height: 40px">Assistant Engineer Internship at <a href="https://www.agedi.fr/">AGEDI</a>.<br>Full stack web development (Spring Boot, Angular, PostgreSQL).</p>
+        <hr>
+        <p class="xpHeader"><span class="grayDot"></span><span class="title">Research Lab Internship</span> - 2023 - 1.5 months</p>
+        <p>Research internship of excellence at the Grenoble Informatics Laboratory (<a href="https://www.liglab.fr/">LIG</a>), see in <a routerLink="/my-projects">my projects</a>.</p>
+        <hr>
+        <p class="xpHeader"><span class="grayDot"></span><span class="title">Integrated Preparatory Class</span> - 2022-2024 - 2 years</p>
+        <p>Integrated preparatory class at Polytech Grenoble (L2 MIN at DLST - UGA).</p>
+        <hr>
+        <p class="xpHeader"><span class="grayDot"></span><span class="title">High School Diploma (Baccalauréat)</span> - 2022</p>
+        <p>Specialized in Mathematics, Physics & Chemistry.<br>Option in Advanced Mathematics.</p>
+        <hr>
+        <p class="xpHeader"><span class="grayDot"></span><span class="title">Site W</span> - 2018 - 1 month</p>
+        <p>Completed an internship at <a href="https://sitew.com">Site W</a>.</p>
+        <hr>
+    </div>
+
+    <h1 class="title" *ngIf="langService.isFr">
         • Mes compétences
     </h1>
+    <h1 class="title" *ngIf="langService.isEn">
+        • My Skills
+    </h1>
+    
     <div id="comp">
         <div>
             <img src="assets/icon/java_icon.png">

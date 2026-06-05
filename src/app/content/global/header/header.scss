@@ -51,6 +51,15 @@
   color: black;
 }
 
+.lang-btn {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  font-weight: 600;
+  min-width: 55px;
+  text-align: center;
+}
+
 @media screen and (max-width: 650px) {
   #header {
     gap: 0;
@@ -63,6 +72,11 @@
     padding-left: 3px;
     padding-right: 3px;
   }
+  .lang-btn {
+    right: 10px;
+    font-size: 14px;
+    min-width: 45px;
+  }
 }
 
 
@@ -71,6 +85,11 @@
     font-size: 11px;
     padding-left: 1px;
     padding-right: 1px;
+  }
+  .lang-btn {
+    right: 5px;
+    font-size: 11px;
+    min-width: 35px;
   }
 }
 

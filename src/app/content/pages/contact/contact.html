@@ -1,12 +1,24 @@
 <div id="container">
-  <h1 class="title">
+  <h1 class="title" *ngIf="langService.isFr">
     Me contacter
   </h1>
-  <p>
+  <h1 class="title" *ngIf="langService.isEn">
+    Contact me
+  </h1>
+  
+  <p *ngIf="langService.isFr">
     Si vous avez des questions ou des propositions, n'hésitez pas à m'envoyer un mail à l'adresse ci-dessous :
     <br><br>
     <strong class="main_color">arnaud.alet@arnaud-dev.fr</strong>
     <br><br>
     Si vous voulez retrouver tous mes projets voici mon <strong><a href="https://github.com/arnauda-gh">GitHub</a></strong>.
+  </p>
+  
+  <p *ngIf="langService.isEn">
+    If you have any questions or proposals, feel free to send me an email at the address below:
+    <br><br>
+    <strong class="main_color">arnaud.alet@arnaud-dev.fr</strong>
+    <br><br>
+    If you want to find all of my projects, here is my <strong><a href="https://github.com/arnauda-gh">GitHub</a></strong>.
   </p>
 </div>

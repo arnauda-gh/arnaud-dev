@@ -1,9 +1,23 @@
 <div id="header">
-  <p class="link" routerLink="home" routerLinkActive="current">Accueil</p>
+  <p class="link" routerLink="home" routerLinkActive="current" *ngIf="langService.isFr">Accueil</p>
+  <p class="link" routerLink="home" routerLinkActive="current" *ngIf="langService.isEn">Home</p>
+
   <p class="slash">•</p>
-  <p class="link" routerLink="me" routerLinkActive="current">Plus sur moi</p>
+
+  <p class="link" routerLink="me" routerLinkActive="current" *ngIf="langService.isFr">Plus sur moi</p>
+  <p class="link" routerLink="me" routerLinkActive="current" *ngIf="langService.isEn">About me</p>
+
   <p class="slash">•</p>
-  <p class="link" routerLink="my-projects" routerLinkActive="current">Mes projets</p>
+
+  <p class="link" routerLink="my-projects" routerLinkActive="current" *ngIf="langService.isFr">Mes projets</p>
+  <p class="link" routerLink="my-projects" routerLinkActive="current" *ngIf="langService.isEn">My projects</p>
+
   <p class="slash">•</p>
+
   <p class="link" routerLink="contact" routerLinkActive="current">Contact</p>
+
+  <p class="link lang-btn" (click)="langService.toggleLang()">
+    <span *ngIf="langService.isFr">🇬🇧 EN</span>
+    <span *ngIf="langService.isEn">🇫🇷 FR</span>
+  </p>
 </div>
