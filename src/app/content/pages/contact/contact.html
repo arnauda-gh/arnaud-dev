@@ -1,24 +1,30 @@
 <div id="container">
-  <h1 class="title" *ngIf="langService.isFr">
-    Me contacter
-  </h1>
-  <h1 class="title" *ngIf="langService.isEn">
-    Contact me
-  </h1>
+  <h1 class="title" *ngIf="langService.isFr">Me contacter</h1>
+  <h1 class="title" *ngIf="langService.isEn">Contact Me</h1>
   
-  <p *ngIf="langService.isFr">
-    Si vous avez des questions ou des propositions, n'hésitez pas à m'envoyer un mail à l'adresse ci-dessous :
-    <br><br>
-    <strong class="main_color">arnaud.alet@arnaud-dev.fr</strong>
-    <br><br>
-    Si vous voulez retrouver tous mes projets voici mon <strong><a href="https://github.com/arnauda-gh">GitHub</a></strong>.
-  </p>
-  
-  <p *ngIf="langService.isEn">
-    If you have any questions or proposals, feel free to send me an email at the address below:
-    <br><br>
-    <strong class="main_color">arnaud.alet@arnaud-dev.fr</strong>
-    <br><br>
-    If you want to find all of my projects, here is my <strong><a href="https://github.com/arnauda-gh">GitHub</a></strong>.
-  </p>
+  <div id="contactBox">
+    <div id="contactHeader">
+      <svg viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true" style="fill: var(--text-secondary);"><path d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5C0 2.784.784 2 1.75 2zM1.5 12.25a.25.25 0 00.25.25h12.5a.25.25 0 00.25-.25V6.03L8.14 9.17a.75.75 0 01-.28.03c-.09 0-.19-.01-.28-.03L1.5 6.03v6.22zM1.5 4.39v.03L8 7.57l6.5-3.15v-.03a.25.25 0 00-.25-.25H1.75a.25.25 0 00-.25.25z"></path></svg>
+      <span>contact.md</span>
+    </div>
+    <div id="contactBody">
+      <p class="intro" *ngIf="langService.isFr">
+        Si vous avez des questions, des propositions de projets ou simplement pour discuter, n'hésitez pas à m'envoyer un e-mail :
+      </p>
+      <p class="intro" *ngIf="langService.isEn">
+        If you have any questions, project proposals, or just want to chat, feel free to send me an email:
+      </p>
+      
+      <div id="emailBox">
+        <code>arnaud.alet@arnaud-dev.fr</code>
+      </div>
+      
+      <p class="sub" *ngIf="langService.isFr">
+        Vous pouvez également retrouver l'intégralité de mes codes sources et projets ouverts sur mon profil <strong><a href="https://github.com/arnauda-gh" target="_blank">GitHub</a></strong>.
+      </p>
+      <p class="sub" *ngIf="langService.isEn">
+        You can also find all of my source code and open projects on my <strong><a href="https://github.com/arnauda-gh" target="_blank">GitHub</a></strong> profile.
+      </p>
+    </div>
+  </div>
 </div>

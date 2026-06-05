@@ -1,141 +1,201 @@
 <div id="container">
-    <div id="nameContainer">
-        <img id="profilIcon" src="assets/_photo%20de%20profil.jpg"/>
-        <p>Arnaud ALET</p>
-    </div>
-    
-    <h1 class="title" *ngIf="langService.isFr">
-        • Formations & Expériences
-    </h1>
-    <h1 class="title" *ngIf="langService.isEn">
-        • Education & Experience
-    </h1>
-    
-    <div id="formations" *ngIf="langService.isFr">
-        <p class="xpHeader"><span class="greenDot"></span><span class="title">Master - MoSIG</span> - depuis 2025 - Promo 2027</p>
-        <p style="line-height: 40px">Master of Science in Informatics at Grenoble.<br>Double diplôme - Master international en Anglais.</p>
-        <hr>
-        <p class="xpHeader"><span class="greenDot"></span><span class="title">Diplôme Ingénieur - Ensimag</span> - depuis 2024 - Promo 2027</p>
-        <p style="line-height: 40px">Étudiant à l'Ensimag - Grenoble INP.</p>
-        <hr>
-        <p class="xpHeader"><span class="greenDot"></span><span class="title">BugBuster</span> - Job étudiant - depuis 2024 - 1 an et 6 mois</p>
-        <p style="line-height: 40px">Étudiant associé à l'Ensimag.<br>Maintenance informatique sur le matériel de l’école et sur le matériel personnel des étudiants.</p>
-        <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Stage de recherche</span> - 2026 - 4 mois</p>
-        <p style="line-height: 40px">Stage de recherche au Laboratoire d'Informatique de Grenoble (<a href="https://www.liglab.fr/">LIG</a>).<br>
-            Amélioration d'algorithmes de recherche 2D avec des prédictions. Voir dans <a routerLink="/my-projects">mes projets</a>.</p>
-        <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Stage AI</span> - 2025 - 2 mois</p>
-        <p style="line-height: 40px">Stage Assistant Ingénieur chez <a href="https://www.agedi.fr/">AGEDI</a>.<br>Développement web full stack (Spring, Angular, PostgreSQL).</p>
-        <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Stage Laboratoire de Recherche</span> - 2023 - 1 mois et demi</p>
-        <p>Stage d'excellence au Laboratoire d'Informatique de Grenoble (<a href="https://www.liglab.fr/">LIG</a>), voir dans <a routerLink="/my-projects">mes projets</a>.</p>
-        <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Prépa Intégrée</span> - 2022-2024 - 2 ans</p>
-        <p>Prépa intégrée à Polytech Grenoble (L2 MIN au DLST - UGA).</p>
-        <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Baccalauréat</span> - 2022</p>
-        <p>Spécialité Mathématiques, Physique Chimie.<br>Option Maths Expertes.</p>
-        <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Site W</span> - 2018 - 1 mois</p>
-        <p>Réalisation d'un stage chez <a href="https://sitew.com">Site W</a>.</p>
-        <hr>
+  <!-- Formations (Education) Section -->
+  <h1 class="title" *ngIf="langService.isFr">• Formations</h1>
+  <h1 class="title" *ngIf="langService.isEn">• Education</h1>
+
+  <div class="timeline">
+    <!-- Master ORCO -->
+    <div class="timeline-item ongoing">
+      <div class="timeline-badge"></div>
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <h3 class="timeline-title">Master - ORCO (M2)</h3>
+          <span class="timeline-date" *ngIf="langService.isFr">depuis 2025 (Promo 2027)</span>
+          <span class="timeline-date" *ngIf="langService.isEn">since 2025 (Class of 2027)</span>
+        </div>
+        <p class="timeline-desc" *ngIf="langService.isFr">Master of Science in Operations Research, Combinatorics and Optimization.<br>Double diplôme - Master international en Anglais.</p>
+        <p class="timeline-desc" *ngIf="langService.isEn">Master of Science in Operations Research, Combinatorics and Optimization.<br>Double degree - International Master taught in English.</p>
+      </div>
     </div>
 
-    <div id="formations" *ngIf="langService.isEn">
-        <p class="xpHeader"><span class="greenDot"></span><span class="title">Master - MoSIG</span> - since 2025 - Class of 2027</p>
-        <p style="line-height: 40px">Master of Science in Informatics at Grenoble.<br>Double degree - International Master taught in English.</p>
-        <hr>
-        <p class="xpHeader"><span class="greenDot"></span><span class="title">Engineering Degree - Ensimag</span> - since 2024 - Class of 2027</p>
-        <p style="line-height: 40px">Student at Ensimag - Grenoble INP.</p>
-        <hr>
-        <p class="xpHeader"><span class="greenDot"></span><span class="title">BugBuster</span> - Student Job - since 2024 - 1 year & 6 months</p>
-        <p style="line-height: 40px">Student assistant at Ensimag.<br>Hardware and software support for the school and students' personal devices.</p>
-        <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Research Internship</span> - 2026 - 4 months</p>
-        <p style="line-height: 40px">Research internship at the Grenoble Informatics Laboratory (<a href="https://www.liglab.fr/">LIG</a>).<br>
-            Improving 2D search algorithms with predictions. See in <a routerLink="/my-projects">my projects</a>.</p>
-        <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Assistant Engineer Internship</span> - 2025 - 2 months</p>
-        <p style="line-height: 40px">Assistant Engineer Internship at <a href="https://www.agedi.fr/">AGEDI</a>.<br>Full stack web development (Spring Boot, Angular, PostgreSQL).</p>
-        <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Research Lab Internship</span> - 2023 - 1.5 months</p>
-        <p>Research internship of excellence at the Grenoble Informatics Laboratory (<a href="https://www.liglab.fr/">LIG</a>), see in <a routerLink="/my-projects">my projects</a>.</p>
-        <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Integrated Preparatory Class</span> - 2022-2024 - 2 years</p>
-        <p>Integrated preparatory class at Polytech Grenoble (L2 MIN at DLST - UGA).</p>
-        <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">High School Diploma (Baccalauréat)</span> - 2022</p>
-        <p>Specialized in Mathematics, Physics & Chemistry.<br>Option in Advanced Mathematics.</p>
-        <hr>
-        <p class="xpHeader"><span class="grayDot"></span><span class="title">Site W</span> - 2018 - 1 month</p>
-        <p>Completed an internship at <a href="https://sitew.com">Site W</a>.</p>
-        <hr>
+    <!-- Ensimag -->
+    <div class="timeline-item ongoing">
+      <div class="timeline-badge"></div>
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <h3 class="timeline-title">Diplôme Ingénieur - Ensimag</h3>
+          <span class="timeline-date" *ngIf="langService.isFr">depuis 2024 (Promo 2027)</span>
+          <span class="timeline-date" *ngIf="langService.isEn">since 2024 (Class of 2027)</span>
+        </div>
+        <p class="timeline-desc" *ngIf="langService.isFr">Étudiant à l'Ensimag - Grenoble INP.</p>
+        <p class="timeline-desc" *ngIf="langService.isEn">Student at Ensimag - Grenoble INP.</p>
+      </div>
     </div>
 
-    <h1 class="title" *ngIf="langService.isFr">
-        • Mes compétences
-    </h1>
-    <h1 class="title" *ngIf="langService.isEn">
-        • My Skills
-    </h1>
-    
-    <div id="comp">
-        <div>
-            <img src="assets/icon/java_icon.png">
-            <p>Java</p>
+    <!-- Prépa intégrée -->
+    <div class="timeline-item past">
+      <div class="timeline-badge"></div>
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <h3 class="timeline-title" *ngIf="langService.isFr">Prépa Intégrée</h3>
+          <h3 class="timeline-title" *ngIf="langService.isEn">Integrated Preparatory Class</h3>
+          <span class="timeline-date">2022 - 2024 (2 ans)</span>
         </div>
-        <div>
-            <img src="assets/icon/c.png">
-            <p>C</p>
-        </div>
-        <div>
-            <img src="assets/icon/cpp_icon.png">
-            <p>C++</p>
-        </div>
-        <div>
-            <img src="assets/icon/mongoDB.png">
-            <p>MongoDB</p>
-        </div>
-        <div>
-            <img src="assets/icon/angular_icon.png">
-            <p>Angular</p>
-        </div>
-        <div>
-            <img class="rounded" src="assets/icon/typescript_icon.png">
-            <p>TS</p>
-        </div>
-        <div>
-            <img src="assets/icon/nodejs_icon.png">
-            <p>NodeJs</p>
-        </div>
-        <div>
-            <img src="assets/icon/flutter_icon.png">
-            <p>Flutter</p>
-        </div>
-        <div>
-            <img src="assets/icon/dart_icon.png">
-            <p>Dart</p>
-        </div>
-        <div>
-            <img src="assets/icon/python_icon.png">
-            <p>Python</p>
-        </div>
-        <div>
-            <img src="assets/icon/html_icon.png">
-            <p>Html</p>
-        </div>
-        <div>
-            <img src="assets/icon/css_icon.png">
-            <p>Css</p>
-        </div>
-        <div>
-            <img src="assets/icon/spring_icon.png">
-            <p>Spring</p>
-        </div>
-        <div>
-            <img src="assets/icon/linux_icon.png">
-            <p>Linux</p>
-        </div>
+        <p class="timeline-desc" *ngIf="langService.isFr">Prépa intégrée à Polytech Grenoble (L2 MIN au DLST - UGA).</p>
+        <p class="timeline-desc" *ngIf="langService.isEn">Integrated preparatory class at Polytech Grenoble (L2 MIN at DLST - UGA).</p>
+      </div>
     </div>
+
+    <!-- Baccalauréat -->
+    <div class="timeline-item past">
+      <div class="timeline-badge"></div>
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <h3 class="timeline-title">Baccalauréat</h3>
+          <span class="timeline-date">2022</span>
+        </div>
+        <p class="timeline-desc" *ngIf="langService.isFr">Spécialité Mathématiques, Physique Chimie.<br>Option Maths Expertes.</p>
+        <p class="timeline-desc" *ngIf="langService.isEn">Specialized in Mathematics, Physics & Chemistry.<br>Option in Advanced Mathematics.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Expériences (Experience) Section -->
+  <h1 class="title" *ngIf="langService.isFr">• Expériences</h1>
+  <h1 class="title" *ngIf="langService.isEn">• Experience</h1>
+
+  <div class="timeline">
+    <!-- BugBuster -->
+    <div class="timeline-item ongoing">
+      <div class="timeline-badge"></div>
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <h3 class="timeline-title" *ngIf="langService.isFr">BugBuster - Job étudiant</h3>
+          <h3 class="timeline-title" *ngIf="langService.isEn">BugBuster - Student Job</h3>
+          <span class="timeline-date" *ngIf="langService.isFr">depuis 2024 (1 an et 6 mois)</span>
+          <span class="timeline-date" *ngIf="langService.isEn">since 2024 (1 year & 6 months)</span>
+        </div>
+        <p class="timeline-desc" *ngIf="langService.isFr">Étudiant associé à l'Ensimag.<br>Maintenance informatique sur le matériel de l’école et sur le matériel personnel des étudiants.</p>
+        <p class="timeline-desc" *ngIf="langService.isEn">Student assistant at Ensimag.<br>Hardware and software support for the school and students' personal devices.</p>
+      </div>
+    </div>
+
+    <!-- Stage de recherche 2026 -->
+    <div class="timeline-item past">
+      <div class="timeline-badge"></div>
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <h3 class="timeline-title" *ngIf="langService.isFr">Stage de recherche</h3>
+          <h3 class="timeline-title" *ngIf="langService.isEn">Research Internship</h3>
+          <span class="timeline-date">2026 (4 mois)</span>
+        </div>
+        <p class="timeline-desc" *ngIf="langService.isFr">Stage de recherche au Laboratoire d'Informatique de Grenoble (<a href="https://www.liglab.fr/" target="_blank">LIG</a>).<br>Amélioration d'algorithmes de recherche 2D avec des prédictions. Voir dans <a routerLink="/my-projects">mes projets</a>.</p>
+        <p class="timeline-desc" *ngIf="langService.isEn">Research internship at the Grenoble Informatics Laboratory (<a href="https://www.liglab.fr/" target="_blank">LIG</a>).<br>Improving 2D search algorithms with predictions. See in <a routerLink="/my-projects">my projects</a>.</p>
+      </div>
+    </div>
+
+    <!-- Stage AI 2025 -->
+    <div class="timeline-item past">
+      <div class="timeline-badge"></div>
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <h3 class="timeline-title" *ngIf="langService.isFr">Stage Assistant Ingénieur</h3>
+          <h3 class="timeline-title" *ngIf="langService.isEn">Assistant Engineer Internship</h3>
+          <span class="timeline-date">2025 (2 mois)</span>
+        </div>
+        <p class="timeline-desc" *ngIf="langService.isFr">Stage Assistant Ingénieur chez <a href="https://www.agedi.fr/" target="_blank">AGEDI</a>.<br>Développement web full stack (Spring Boot, Angular, PostgreSQL).</p>
+        <p class="timeline-desc" *ngIf="langService.isEn">Assistant Engineer Internship at <a href="https://www.agedi.fr/" target="_blank">AGEDI</a>.<br>Full stack web development (Spring Boot, Angular, PostgreSQL).</p>
+      </div>
+    </div>
+
+    <!-- Stage LIG 2023 -->
+    <div class="timeline-item past">
+      <div class="timeline-badge"></div>
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <h3 class="timeline-title" *ngIf="langService.isFr">Stage Laboratoire de Recherche</h3>
+          <h3 class="timeline-title" *ngIf="langService.isEn">Research Lab Internship</h3>
+          <span class="timeline-date">2023 (1 mois et demi)</span>
+        </div>
+        <p class="timeline-desc" *ngIf="langService.isFr">Stage d'excellence au Laboratoire d'Informatique de Grenoble (<a href="https://www.liglab.fr/" target="_blank">LIG</a>), voir dans <a routerLink="/my-projects">mes projets</a>.</p>
+        <p class="timeline-desc" *ngIf="langService.isEn">Research internship of excellence at the Grenoble Informatics Laboratory (<a href="https://www.liglab.fr/" target="_blank">LIG</a>), see in <a routerLink="/my-projects">my projects</a>.</p>
+      </div>
+    </div>
+
+    <!-- Site W -->
+    <div class="timeline-item past">
+      <div class="timeline-badge"></div>
+      <div class="timeline-card">
+        <div class="timeline-header">
+          <h3 class="timeline-title">Site W</h3>
+          <span class="timeline-date">2018 (1 mois)</span>
+        </div>
+        <p class="timeline-desc" *ngIf="langService.isFr">Réalisation d'un stage chez <a href="https://sitew.com" target="_blank">Site W</a>.</p>
+        <p class="timeline-desc" *ngIf="langService.isEn">Completed an internship at <a href="https://sitew.com" target="_blank">Site W</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills Section -->
+  <h1 class="title" *ngIf="langService.isFr">• Mes compétences</h1>
+  <h1 class="title" *ngIf="langService.isEn">• My Skills</h1>
+
+  <div id="comp">
+    <div class="skill-tag">
+      <img class="skill-icon" src="assets/icon/java_icon.png">
+      <span>Java</span>
+    </div>
+    <div class="skill-tag">
+      <img class="skill-icon" src="assets/icon/c.png">
+      <span>C</span>
+    </div>
+    <div class="skill-tag">
+      <img class="skill-icon" src="assets/icon/cpp_icon.png">
+      <span>C++</span>
+    </div>
+    <div class="skill-tag">
+      <img class="skill-icon" src="assets/icon/mongoDB.png">
+      <span>MongoDB</span>
+    </div>
+    <div class="skill-tag">
+      <img class="skill-icon" src="assets/icon/angular_icon.png">
+      <span>Angular</span>
+    </div>
+    <div class="skill-tag">
+      <img class="skill-icon" src="assets/icon/typescript_icon.png">
+      <span>TypeScript</span>
+    </div>
+    <div class="skill-tag">
+      <img class="skill-icon" src="assets/icon/nodejs_icon.png">
+      <span>NodeJs</span>
+    </div>
+    <div class="skill-tag">
+      <img class="skill-icon" src="assets/icon/flutter_icon.png">
+      <span>Flutter</span>
+    </div>
+    <div class="skill-tag">
+      <img class="skill-icon" src="assets/icon/dart_icon.png">
+      <span>Dart</span>
+    </div>
+    <div class="skill-tag">
+      <img class="skill-icon" src="assets/icon/python_icon.png">
+      <span>Python</span>
+    </div>
+    <div class="skill-tag">
+      <img class="skill-icon" src="assets/icon/html_icon.png">
+      <span>HTML</span>
+    </div>
+    <div class="skill-tag">
+      <img class="skill-icon" src="assets/icon/css_icon.png">
+      <span>CSS</span>
+    </div>
+    <div class="skill-tag">
+      <img class="skill-icon" src="assets/icon/spring_icon.png">
+      <span>Spring Boot</span>
+    </div>
+    <div class="skill-tag">
+      <img class="skill-icon" src="assets/icon/linux_icon.png">
+      <span>Linux</span>
+    </div>
+  </div>
 </div>

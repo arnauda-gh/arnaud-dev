@@ -1,20 +1,45 @@
 <div id="homeContainer">
-  <h1 class="title" *ngIf="langService.isFr">Qui suis-je ?</h1>
-  <h1 class="title" *ngIf="langService.isEn">Who am I?</h1>
-  <div id="firstLine">
-    <img src="assets/_photo%20de%20profil.jpg"/>
-    <div id="textContainer">
+  <!-- Left column: Avatar & Profile info -->
+  <div id="sidebar">
+    <img id="avatar" src="assets/_photo%20de%20profil.jpg"/>
+    <h2 id="profileName">Arnaud ALET</h2>
+    <div id="profileMeta">
+      <p>📍 Grenoble, France</p>
+      <p>✉️ <a href="mailto:arnaud.alet@arnaud-dev.fr">arnaud.alet@arnaud-dev.fr</a></p>
+      <p>🔗 <a href="https://github.com/arnauda-gh" target="_blank">github.com/arnauda-gh</a></p>
+    </div>
+  </div>
+
+  <!-- Right column: README.md box -->
+  <div id="readmeBox">
+    <div id="readmeHeader">
+      <svg viewBox="0 0 16 16" width="16" height="16" style="fill: var(--text-secondary); display: inline-block; vertical-align: middle; margin-right: 4px;">
+        <path d="M2 3h12v2H2zm0 4h12v2H2zm0 4h8v2H2z"></path>
+      </svg>
+      <span>README.md</span>
+    </div>
+    <div id="readmeContent">
+      <h1 *ngIf="langService.isFr">Bonjour, je suis Arnaud ALET 👋</h1>
+      <h1 *ngIf="langService.isEn">Hello, I am Arnaud ALET 👋</h1>
+
       <p *ngIf="langService.isFr">
-        Bonjour, je suis Arnaud ALET.<br/><br/>
-        Étudiant et passionné d'informatique depuis petit, j'ai pour objectif de poursuivre dans cette voie de
-        l'informatique et du développement.<br/><br/>
-        Autodidacte et hétérodidacte je continue de découvrir de nouvelles notions et nouveaux domaines tout les jours.<br/><br/><a routerLink="/me">En savoir plus &#8594;</a>
+        Étudiant et passionné d'informatique depuis mon plus jeune âge, j'ai pour objectif de poursuivre ma carrière dans le développement logiciel et les systèmes complexes.
       </p>
       <p *ngIf="langService.isEn">
-        Hello, I am Arnaud ALET.<br/><br/>
-        As a student who has been passionate about computer science since childhood, my goal is to continue on this path of computer science and software development.<br/><br/>
-        Self-taught and always eager to learn, I continue to discover new concepts and fields every single day.<br/><br/><a routerLink="/me">Learn more &#8594;</a>
+        As a student who has been passionate about computer science since childhood, my goal is to pursue my career in software development and complex systems.
       </p>
+
+      <p *ngIf="langService.isFr">
+        Autodidacte et toujours avide d'apprendre, je continue de découvrir de nouvelles technologies, de nouveaux concepts et domaines scientifiques chaque jour.
+      </p>
+      <p *ngIf="langService.isEn">
+        Self-taught and always eager to learn, I continue to discover new technologies, scientific concepts, and fields every single day.
+      </p>
+
+      <div class="action-btn">
+        <a routerLink="/me" class="button" *ngIf="langService.isFr">En savoir plus →</a>
+        <a routerLink="/me" class="button" *ngIf="langService.isEn">Learn more →</a>
+      </div>
     </div>
   </div>
 </div>

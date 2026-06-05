@@ -1,23 +1,39 @@
 <div id="header" [class.hidden]="isHidden">
-  <p class="link" routerLink="home" routerLinkActive="current" *ngIf="langService.isFr">Accueil</p>
-  <p class="link" routerLink="home" routerLinkActive="current" *ngIf="langService.isEn">Home</p>
+  <div class="header-left d-none d-sm-flex"></div>
 
-  <p class="slash">•</p>
+  <div class="header-center">
+    <!-- Accueil / Home -->
+    <a class="link" routerLink="home" routerLinkActive="current" *ngIf="langService.isFr" data-text="Accueil">Accueil</a>
+    <a class="link" routerLink="home" routerLinkActive="current" *ngIf="langService.isEn" data-text="Home">Home</a>
 
-  <p class="link" routerLink="me" routerLinkActive="current" *ngIf="langService.isFr">Plus sur moi</p>
-  <p class="link" routerLink="me" routerLinkActive="current" *ngIf="langService.isEn">About me</p>
+    <!-- Plus sur moi / About me (Desktop) -->
+    <a class="link d-none d-sm-flex" routerLink="me" routerLinkActive="current" *ngIf="langService.isFr" data-text="Plus sur moi">Plus sur moi</a>
+    <a class="link d-none d-sm-flex" routerLink="me" routerLinkActive="current" *ngIf="langService.isEn" data-text="About me">About me</a>
 
-  <p class="slash">•</p>
+    <!-- Moi / Me (Mobile) -->
+    <a class="link d-flex d-sm-none" routerLink="me" routerLinkActive="current" *ngIf="langService.isFr" data-text="Moi">Moi</a>
+    <a class="link d-flex d-sm-none" routerLink="me" routerLinkActive="current" *ngIf="langService.isEn" data-text="Me">Me</a>
 
-  <p class="link" routerLink="my-projects" routerLinkActive="current" *ngIf="langService.isFr">Mes projets</p>
-  <p class="link" routerLink="my-projects" routerLinkActive="current" *ngIf="langService.isEn">My projects</p>
+    <!-- Mes projets / My projects (Desktop) -->
+    <a class="link d-none d-sm-flex" routerLink="my-projects" routerLinkActive="current" *ngIf="langService.isFr" data-text="Mes projets">Mes projets</a>
+    <a class="link d-none d-sm-flex" routerLink="my-projects" routerLinkActive="current" *ngIf="langService.isEn" data-text="My projects">My projects</a>
 
-  <p class="slash">•</p>
+    <!-- Projets / Projects (Mobile) -->
+    <a class="link d-flex d-sm-none" routerLink="my-projects" routerLinkActive="current" *ngIf="langService.isFr" data-text="Projets">Projets</a>
+    <a class="link d-flex d-sm-none" routerLink="my-projects" routerLinkActive="current" *ngIf="langService.isEn" data-text="Projects">Projects</a>
 
-  <p class="link" routerLink="contact" routerLinkActive="current">Contact</p>
+    <!-- Contact -->
+    <a class="link" routerLink="contact" routerLinkActive="current" data-text="Contact">Contact</a>
+  </div>
 
-  <p class="link lang-btn" (click)="langService.toggleLang()">
-    <span *ngIf="langService.isFr">🇬🇧 EN</span>
-    <span *ngIf="langService.isEn">🇫🇷 FR</span>
-  </p>
+  <div class="header-right">
+    <button class="theme-btn" (click)="themeService.toggleTheme()" title="Toggle Theme">
+      <span>{{ themeService.isDark ? '☀️' : '🌙' }}</span>
+    </button>
+
+    <button class="lang-btn" (click)="langService.toggleLang()" title="Toggle Language">
+      <span *ngIf="langService.isFr">🇬🇧 EN</span>
+      <span *ngIf="langService.isEn">🇫🇷 FR</span>
+    </button>
+  </div>
 </div>

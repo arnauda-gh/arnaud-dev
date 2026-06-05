@@ -1,22 +1,21 @@
 #header {
-  --header-height: 35px;
+  --header-height: 56px;
 
   display: flex;
   width: 100%;
   height: var(--header-height);
-  justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
 
-  box-shadow: 0 4px 10px rgba(12, 12, 12, 0.2);
+  border-bottom: 1px solid var(--border-color);
 
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: var(--header-bg);
   z-index: 1000;
 
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 #header.hidden {
@@ -25,82 +24,146 @@
   pointer-events: none;
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  gap: 8px;
+}
+
 .link {
-  line-height: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   font-size: 18px;
-
+  font-weight: 400;
   cursor: pointer;
+  padding: 0 20px;
+  color: var(--text-color);
+  transition: color 0.2s ease, border-color 0.2s ease;
+  border-bottom: 2px solid transparent;
+  user-select: none;
+}
 
-  padding-left: 5px;
-  padding-right: 5px;
-
-  color: #2d3436;
-
-  border-radius: 9px;
-
-  transition: background-color 0.15s;
+.link::after {
+  content: attr(data-text);
+  content: attr(data-text) / "";
+  display: block;
+  font-weight: 600;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 .link:hover {
-  background-color: var(--main-color);
-
-  color: black;
-
-  transition: background-color 0.15s;
-}
-
-.slash {
-  line-height: var(--header-height);
-
-  font-size: 22px;
-
-  cursor: default;
+  color: var(--link-hover-color);
+  border-bottom-color: var(--border-color);
+  text-decoration: none;
 }
 
 .current {
-  font-weight: 500;
-  color: black;
+  font-weight: 600;
+  border-bottom: 2px solid var(--main-color-hover);
 }
 
 .lang-btn {
-  position: absolute;
-  right: 30px;
-  top: 10px;
-  font-weight: 600;
-  min-width: 55px;
-  text-align: center;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 6px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--card-bg);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s, border-color 0.2s;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-btn:hover {
+  background-color: var(--btn-hover-bg);
+}
+
+.theme-btn {
+  font-size: 18px;
+  padding: 6px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--card-bg);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s, border-color 0.2s;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-btn:hover {
+  background-color: var(--btn-hover-bg);
 }
 
 @media screen and (max-width: 650px) {
   #header {
-    gap: 0;
-  }
-  .slash {
-    font-size: 10px;
+    height: 52px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
   .link {
-    font-size: 16px;
-    padding-left: 3px;
-    padding-right: 3px;
+    font-size: 15px;
+    padding: 0 10px;
   }
   .lang-btn {
-    right: 10px;
     font-size: 14px;
-    min-width: 45px;
+    padding: 4px 8px;
+  }
+  .theme-btn {
+    font-size: 15px;
+    padding: 4px 8px;
   }
 }
 
+@media screen and (max-width: 575px) {
+  .header-right {
+    flex: initial;
+  }
+  .header-center {
+    flex: 1;
+    justify-content: center;
+  }
+}
 
-@media screen and (max-width: 362px) {
+@media screen and (max-width: 480px) {
   .link {
-    font-size: 11px;
-    padding-left: 1px;
-    padding-right: 1px;
+    font-size: 14px;
+    padding: 0 8px;
   }
   .lang-btn {
-    right: 5px;
-    font-size: 11px;
-    min-width: 35px;
+    padding: 4px 6px;
+    font-size: 13px;
+  }
+  .theme-btn {
+    padding: 4px 6px;
+    font-size: 14px;
   }
 }
-

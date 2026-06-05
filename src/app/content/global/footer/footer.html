@@ -1,9 +1,12 @@
-<hr>
 <div id="footer">
-  <div class="column">
-    <p *ngIf="langService.isFr">Site pensé et réalisé dans son intégralité par Arnaud ALET.</p>
-    <p *ngIf="langService.isEn">Site designed and built entirely by Arnaud ALET.</p>
-    <p class="smaller" *ngIf="langService.isFr">arnaud.alet@arnaud-dev.fr<br>Site sous licence &rarr; GNU General Public License v3.0</p>
-    <p class="smaller" *ngIf="langService.isEn">arnaud.alet@arnaud-dev.fr<br>Licensed under &rarr; GNU General Public License v3.0</p>
+  <div class="footer-left">
+    <span *ngIf="langService.isFr">&copy; 2026 Arnaud ALET. Site pensé et réalisé dans son intégralité.</span>
+    <span *ngIf="langService.isEn">&copy; 2026 Arnaud ALET. Site designed and built entirely.</span>
+  </div>
+  <div class="footer-right">
+    <a href="mailto:arnaud.alet@arnaud-dev.fr">arnaud.alet@arnaud-dev.fr</a>
+    <span class="divider">|</span>
+    <a href="https://github.com/arnauda-gh/arnaud-dev/blob/main/LICENSE" target="_blank" *ngIf="langService.isFr">Licence GPLv3</a>
+    <a href="https://github.com/arnauda-gh/arnaud-dev/blob/main/LICENSE" target="_blank" *ngIf="langService.isEn">GPLv3 License</a>
   </div>
 </div>

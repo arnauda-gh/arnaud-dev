@@ -1,5 +1,6 @@
 import {Component, OnInit, HostListener} from '@angular/core';
 import {LanguageService} from '../../../language.service';
+import {ThemeService} from '../../../theme.service';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ export class Header implements OnInit {
   private lastScrollTop: number = 0;
   public isHidden: boolean = false;
 
-  constructor(public langService: LanguageService) {
+  constructor(public langService: LanguageService, public themeService: ThemeService) {
   }
 
   ngOnInit(): void {
