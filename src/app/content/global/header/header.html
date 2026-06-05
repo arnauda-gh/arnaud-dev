@@ -1,4 +1,4 @@
-<div id="header">
+<div id="header" [class.hidden]="isHidden">
   <p class="link" routerLink="home" routerLinkActive="current" *ngIf="langService.isFr">Accueil</p>
   <p class="link" routerLink="home" routerLinkActive="current" *ngIf="langService.isEn">Home</p>
 
