@@ -3,10 +3,31 @@
   <div id="sidebar">
     <img id="avatar" src="assets/_photo%20de%20profil.jpg"/>
     <h2 id="profileName">Arnaud ALET</h2>
+    
+    <p id="profileTitle" *ngIf="langService.isFr">Étudiant Ingénieur Ensimag & Master ORCO (3A)</p>
+    <p id="profileTitle" *ngIf="langService.isEn">Ensimag Engineering & Master ORCO Student (3A)</p>
+    
     <div id="profileMeta">
-      <p>📍 Grenoble, France</p>
-      <p>✉️ <a href="mailto:arnaud.alet@arnaud-dev.fr">arnaud.alet@arnaud-dev.fr</a></p>
-      <p>🔗 <a href="https://github.com/arnauda-gh" target="_blank">github.com/arnauda-gh</a></p>
+      <p>
+        <span class="meta-icon">📍</span>
+        <span>Grenoble, France</span>
+      </p>
+      <p>
+        <span class="meta-icon">✉️</span>
+        <a href="mailto:arnaud.alet@arnaud-dev.fr">arnaud.alet@arnaud-dev.fr</a>
+      </p>
+      <p>
+        <span class="meta-icon">
+          <svg viewBox="0 0 16 16" width="16" height="16" style="fill: var(--text-color); display: inline-block; vertical-align: middle;"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+        </span>
+        <a href="https://github.com/arnauda-gh" target="_blank">arnauda-gh</a>
+      </p>
+      <p>
+        <span class="meta-icon">
+          <svg viewBox="0 0 24 24" width="16" height="16" style="fill: var(--text-color); display: inline-block; vertical-align: middle;"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </span>
+        <a href="https://www.linkedin.com/in/arnaud-alet-72a053332" target="_blank">arnaud-alet</a>
+      </p>
     </div>
   </div>
 
@@ -22,19 +43,29 @@
       <h1 *ngIf="langService.isFr">Bonjour, je suis Arnaud ALET 👋</h1>
       <h1 *ngIf="langService.isEn">Hello, I am Arnaud ALET 👋</h1>
 
-      <p *ngIf="langService.isFr">
-        Étudiant et passionné d'informatique depuis mon plus jeune âge, j'ai pour objectif de poursuivre ma carrière dans le développement logiciel et les systèmes complexes.
-      </p>
-      <p *ngIf="langService.isEn">
-        As a student who has been passionate about computer science since childhood, my goal is to pursue my career in software development and complex systems.
-      </p>
+      <div *ngIf="langService.isFr">
+        <p>
+          Étudiant en double cursus au sein de l'école d'ingénieurs <strong>Ensimag</strong> et du <strong>Master ORCO</strong> (Recherche Opérationnelle, Combinatoire et Optimisation), je me passionne pour les liens entre l'informatique, les mathématiques et le développement logiciels.
+        </p>
+        <p>
+          Mon parcours réunit des bases théoriques (modélisation, optimisation de graphes, algorithmique) et une pratique technique concrète (développement C/C++, systèmes d'exploitation, Docker et agilité Full Stack).
+        </p>
+        <p>
+          Toujours curieux et avide d'apprendre, je cherche à résoudre des problèmes difficiles et à concevoir des systèmes alliant théorie et pratique.
+        </p>
+      </div>
 
-      <p *ngIf="langService.isFr">
-        Autodidacte et toujours avide d'apprendre, je continue de découvrir de nouvelles technologies, de nouveaux concepts et domaines scientifiques chaque jour.
-      </p>
-      <p *ngIf="langService.isEn">
-        Self-taught and always eager to learn, I continue to discover new technologies, scientific concepts, and fields every single day.
-      </p>
+      <div *ngIf="langService.isEn">
+        <p>
+          A dual-degree student at the <strong>Ensimag</strong> engineering school and the <strong>ORCO Master's program</strong> (Operations Research, Combinatorics, and Optimization), I am passionate about the connections between computer science, mathematics, and software development.
+        </p>
+        <p>
+          My background bridges strong theoretical foundations (modeling, graph optimization, algorithmics) with hands-on technical practice (C/C++ development, operating systems, Docker, and Full Stack agility).
+        </p>
+        <p>
+          Always curious and eager to learn, I look forward to solving challenging problems and building quality software by combining theory and practice.
+        </p>
+      </div>
 
       <div class="action-btn">
         <a routerLink="/me" class="button" *ngIf="langService.isFr">En savoir plus →</a>

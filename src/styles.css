@@ -5,58 +5,64 @@ html {
 }
 
 :root {
-  --bg-color: #f6f8fa;
-  --card-bg: #ffffff;
-  --header-bg: #ffffff;
-  --footer-bg: #f6f8fa;
-  --text-color: #24292f;
-  --text-secondary: #57606a;
-  --border-color: #d0d7de;
-  --shadow-color: rgba(140, 149, 159, 0.12);
-  --shadow-hover-color: rgba(140, 149, 159, 0.2);
-  --scrollbar-bg: #ffffff;
-  --scrollbar-thumb: #d0d7de;
-  --text-container-bg: #ffffff;
+  --bg-color: #f3f5f8;
+  --bg-grad-1: #f8f9fa;
+  --bg-grad-2: #e9ecef;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --footer-bg: #f3f5f8;
+  --text-color: #2b303b;
+  --text-secondary: #5a6578;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --shadow-color: rgba(0, 0, 0, 0.04);
+  --shadow-hover-color: rgba(0, 0, 0, 0.08);
+  --scrollbar-bg: #f3f5f8;
+  --scrollbar-thumb: #cbd5e1;
+  --text-container-bg: rgba(255, 255, 255, 0.9);
   --link-hover-color: #ff9d10;
   
   --main-color: #ffe8cc;
   --main-color-hover: #ff9d10;
   --main-color-hover-border: #d47a00;
-  --btn-hover-bg: #f3f4f6;
+  --btn-hover-bg: rgba(0, 0, 0, 0.03);
   
-  --border-radius: 6px;
+  --border-radius: 12px;
 }
 
 body.dark-theme {
-  --bg-color: #0d1117;
-  --card-bg: #161b22;
-  --header-bg: #161b22;
-  --footer-bg: #0d1117;
-  --text-color: #c9d1d9;
-  --text-secondary: #8b949e;
-  --border-color: #30363d;
-  --shadow-color: rgba(0, 0, 0, 0.3);
-  --shadow-hover-color: rgba(0, 0, 0, 0.5);
-  --scrollbar-bg: #0d1117;
-  --scrollbar-thumb: #30363d;
-  --text-container-bg: #161b22;
+  --bg-color: #0d111a;
+  --bg-grad-1: #0e1320;
+  --bg-grad-2: #080a10;
+  --card-bg: rgba(22, 28, 41, 0.8);
+  --header-bg: rgba(22, 28, 41, 0.75);
+  --footer-bg: #0d111a;
+  --text-color: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --shadow-hover-color: rgba(0, 0, 0, 0.35);
+  --scrollbar-bg: #0d111a;
+  --scrollbar-thumb: #334155;
+  --text-container-bg: rgba(22, 28, 41, 0.9);
   --link-hover-color: #ff9d10;
 
   --main-color: #3d2c18;
   --main-color-hover: #ff9d10;
   --main-color-hover-border: #d47a00;
-  --btn-hover-bg: #21262d;
+  --btn-hover-bg: rgba(255, 255, 255, 0.03);
   
-  --border-radius: 6px;
+  --border-radius: 12px;
 }
 
 body {
-  background-color: var(--bg-color);
+  background: var(--bg-color);
+  background: radial-gradient(circle at 50% 50%, var(--bg-grad-1) 0%, var(--bg-grad-2) 100%);
+  min-height: 100vh;
   color: var(--text-color);
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   line-height: 1.5;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 * {

@@ -7,17 +7,25 @@
   display: flex;
   flex-direction: column;
   margin-top: 30px;
+  box-shadow: 0 6px 18px var(--shadow-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contactBox:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px var(--shadow-hover-color);
 }
 
 #contactHeader {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
+  padding: 10px 16px;
   background-color: var(--bg-color);
   border: 1px solid var(--border-color);
   border-bottom: none;
-  border-radius: 6px 6px 0 0;
   font-size: 17px;
   font-weight: 500;
   color: var(--text-color);
@@ -26,7 +34,6 @@
 #contactBody {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
-  border-radius: 0 0 6px 6px;
   padding: 32px;
   text-align: center;
 }
@@ -45,19 +52,33 @@
   border-radius: var(--border-radius);
   padding: 12px 24px;
   margin-bottom: 24px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+#emailBox:hover {
+  transform: scale(1.02);
+  border-color: var(--main-color-hover);
 }
 
 #emailBox code {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 22px;
   font-weight: 600;
+}
+
+#emailBox code a {
   color: var(--main-color-hover);
+  text-decoration: none;
+}
+
+#emailBox code a:hover {
+  text-decoration: underline;
 }
 
 .sub {
   font-size: 18px;
   color: var(--text-secondary);
-  line-height: 1.5;
+  line-height: 1.6;
   margin-top: 16px;
   border-top: 1px solid var(--border-color);
   padding-top: 20px;

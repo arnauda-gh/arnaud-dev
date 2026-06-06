@@ -2,10 +2,10 @@
 <h1 class="title" *ngIf="langService.isEn">My Projects</h1>
 
 <p id="description" *ngIf="langService.isFr">
-  Voici une liste contenant certains de mes projets Open Source.
+  Voici une sélection de mes travaux, mêlant recherche algorithmique, conception système et projets open source.
 </p>
 <p id="description" *ngIf="langService.isEn">
-  Here is a list containing some of my Open Source projects.
+  Here is a selection of my work, combining algorithmic research, systems design, and open-source projects.
 </p>
 
 <div id="projectsContainer">
@@ -16,37 +16,68 @@
       <h3 class="card-title" *ngIf="langService.isEn">Scientific Paper</h3>
       <img class="card-icon" src="assets/project_icon/article_scientifique_preview.png">
     </div>
-    <p class="card-desc" *ngIf="langService.isFr">Article scientifique améliorant les algorithmes de recherche 2D avec prédictions.</p>
-    <p class="card-desc" *ngIf="langService.isEn">Scientific paper improving 2D search algorithms with predictions.</p>
+    <p class="card-desc" *ngIf="langService.isFr">Amélioration d'algorithmes de recherche 2D en utilisant des prédictions mathématiques. Rédaction d'un article scientifique sur les résultats et avancées obtenues.</p>
+    <p class="card-desc" *ngIf="langService.isEn">Improving 2D search algorithms using mathematical predictions. Co-authored a scientific paper on the results and advances achieved.</p>
     <div class="card-footer">
       <a href="assets/article_scientifique.pdf" target="_blank" *ngIf="langService.isFr">Article →</a>
       <a href="assets/article_scientifique.pdf" target="_blank" *ngIf="langService.isEn">Paper →</a>
     </div>
   </div>
 
-  <!-- WishWim -->
+  <!-- Alwide -->
   <div class="card">
     <div class="card-header">
-      <h3 class="card-title">WishWim</h3>
+      <h3 class="card-title">Alwide</h3>
       <img class="card-icon invert-dark" src="assets/project_icon/al_icon.png">
     </div>
-    <p class="card-desc" *ngIf="langService.isFr">Terminal IDE complet écrit en C. Highlight, auto-complete.</p>
-    <p class="card-desc" *ngIf="langService.isEn">Full text IDE written in C. Syntax highlighting, auto-completion.</p>
+    <p class="card-desc" *ngIf="langService.isFr">Éditeur de texte performant en C (autodidacte) : buffers circulaires, coloration syntaxique temps réel, auto-complétion, etc.</p>
+    <p class="card-desc" *ngIf="langService.isEn">High-performance terminal text editor in C (self-taught): circular buffers, real-time syntax highlighting, auto-completion, etc.</p>
     <div class="card-footer">
-      <a href="https://github.com/arnauda-gh/WishWim" target="_blank">GitHub →</a>
+      <a href="https://github.com/arnauda-gh/Alwide" target="_blank">GitHub →</a>
     </div>
   </div>
 
-  <!-- 2D Physics Unit -->
+  <!-- Librairie Graphique (Projet ENSIMAG) -->
   <div class="card">
     <div class="card-header">
-      <h3 class="card-title">2D Physics Unit</h3>
+      <h3 class="card-title" *ngIf="langService.isFr">Librairie Graphique</h3>
+      <h3 class="card-title" *ngIf="langService.isEn">Graphical Library</h3>
+      <span class="card-emoji-icon">🎨</span>
+    </div>
+    <p class="card-desc" *ngIf="langService.isFr">Moteur d'interface graphique complet en C : gestion d'évènements bas niveau, dessin vectoriel et système de widgets. Projet ENSIMAG.</p>
+    <p class="card-desc" *ngIf="langService.isEn">Complete GUI engine in C: low-level event handling, vector drawing, and widget system. ENSIMAG project.</p>
+    <div class="card-footer">
+      <span class="academic-tag" *ngIf="langService.isFr">Projet Ensimag</span>
+      <span class="academic-tag" *ngIf="langService.isEn">Ensimag Project</span>
+    </div>
+  </div>
+
+  <!-- Nachos Micro-noyau (OS) -->
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title" *ngIf="langService.isFr">Nachos: Micro-Noyau</h3>
+      <h3 class="card-title" *ngIf="langService.isEn">Nachos: Micro-Kernel</h3>
+      <span class="card-emoji-icon">💻</span>
+    </div>
+    <p class="card-desc" *ngIf="langService.isFr">Implémentation multi-threading, ordonnancement, mémoire virtuelle (pagination) et pile réseau sécurisée en C++. Projet ENSIMAG.</p>
+    <p class="card-desc" *ngIf="langService.isEn">Operating system micro-kernel (Nachos) in C++: multi-threading, scheduling, virtual memory (paging), and secure network stack. ENSIMAG project.</p>
+    <div class="card-footer">
+      <span class="academic-tag" *ngIf="langService.isFr">Projet Ensimag</span>
+      <span class="academic-tag" *ngIf="langService.isEn">Ensimag Project</span>
+    </div>
+  </div>
+
+  <!-- 2D Physics Sandbox -->
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title" *ngIf="langService.isFr">Sandbox Physique 2D</h3>
+      <h3 class="card-title" *ngIf="langService.isEn">2D Physics Sandbox</h3>
       <img class="card-icon invert-dark" src="assets/project_icon/2d_unit_test.png">
     </div>
-    <p class="card-desc" *ngIf="langService.isFr">Moteur physique expérimental 2D. En C avec openGL.</p>
-    <p class="card-desc" *ngIf="langService.isEn">Experimental 2D physics engine. In C with OpenGL.</p>
+    <p class="card-desc" *ngIf="langService.isFr">Moteur physique de collision expérimental 2D. En C avec openGL.</p>
+    <p class="card-desc" *ngIf="langService.isEn">Experimental 2D collision physics engine. In C with OpenGL.</p>
     <div class="card-footer">
-      <a href="https://github.com/arnauda-gh/2D_Testing_Unit" target="_blank">GitHub →</a>
+      <a href="https://github.com/arnauda-gh/2D-OpenGL-Collision-Sandbox" target="_blank">GitHub →</a>
     </div>
   </div>
 
@@ -65,16 +96,17 @@
     </div>
   </div>
 
-  <!-- JumpGameV2 -->
+  <!-- Ball Physic -->
   <div class="card">
     <div class="card-header">
-      <h3 class="card-title">JumpGameV2</h3>
+      <h3 class="card-title" *ngIf="langService.isFr">Physique Newtonienne</h3>
+      <h3 class="card-title" *ngIf="langService.isEn">Newtonian Physics</h3>
       <img class="card-icon invert-dark" src="assets/project_icon/jump_game_v2_icon.png">
     </div>
-    <p class="card-desc" *ngIf="langService.isFr">Expérimentation d'un système de collision et de physique.</p>
-    <p class="card-desc" *ngIf="langService.isEn">Experimentation with a collision and physics system.</p>
+    <p class="card-desc" *ngIf="langService.isFr">Système newtonien appliqué à une balle.</p>
+    <p class="card-desc" *ngIf="langService.isEn">Newton system on a ball.</p>
     <div class="card-footer">
-      <a href="https://github.com/arnauda-gh/JumpGameV2" target="_blank">GitHub →</a>
+      <a href="https://github.com/arnauda-gh/ball-platformer" target="_blank">GitHub →</a>
     </div>
   </div>
 
@@ -87,7 +119,7 @@
     <p class="card-desc" *ngIf="langService.isFr">Backend et bot du serveur Dev'Area.</p>
     <p class="card-desc" *ngIf="langService.isEn">Backend and bot for the Dev'Area server.</p>
     <div class="card-footer">
-      <a href="https://github.com/arnauda-gh/Bot_DevArea_2.0" target="_blank">GitHub →</a>
+      <a href="https://github.com/arnauda-gh/DevArea-Backend-v2.0" target="_blank">GitHub →</a>
     </div>
   </div>
 
@@ -103,7 +135,7 @@
       <a href="https://devarea.fr/menu" target="_blank" *ngIf="langService.isFr">Site</a>
       <a href="https://devarea.fr/menu" target="_blank" *ngIf="langService.isEn">Website</a>
       <span class="divider">|</span>
-      <a href="https://github.com/DevAreaServer/DevArea_Site" target="_blank">GitHub →</a>
+      <a href="https://github.com/arnauda-gh/DevArea-Frontend" target="_blank">GitHub →</a>
     </div>
   </div>
 
@@ -120,20 +152,21 @@
     </div>
   </div>
 
-  <!-- Transfer Image -->
+  <!-- Media Synchronizer -->
   <div class="card">
     <div class="card-header">
-      <h3 class="card-title">Transfer Image</h3>
+      <h3 class="card-title" *ngIf="langService.isFr">Synchroniseur de Médias</h3>
+      <h3 class="card-title" *ngIf="langService.isEn">Media Synchronizer</h3>
       <img class="card-icon invert-dark" src="assets/project_icon/transfer_image.png">
     </div>
     <p class="card-desc" *ngIf="langService.isFr">Système de transfer de media d'un portable vers un serveur.</p>
     <p class="card-desc" *ngIf="langService.isEn">Media transfer system from a mobile phone to a server.</p>
     <div class="card-footer">
       <span class="divider">GitHub:</span>
-      <a href="https://github.com/arnauda-gh/Transfer_Image_Client" target="_blank">Client</a>
+      <a href="https://github.com/arnauda-gh/media-synchronizer-Client" target="_blank">Client</a>
       <span class="divider">|</span>
-      <a href="https://github.com/arnauda-gh/Transfer_Image_Server" target="_blank" *ngIf="langService.isFr">Serveur</a>
-      <a href="https://github.com/arnauda-gh/Transfer_Image_Server" target="_blank" *ngIf="langService.isEn">Server</a>
+      <a href="https://github.com/arnauda-gh/media-synchronizer-Server" target="_blank" *ngIf="langService.isFr">Serveur</a>
+      <a href="https://github.com/arnauda-gh/media-synchronizer-Server" target="_blank" *ngIf="langService.isEn">Server</a>
     </div>
   </div>
 
@@ -184,16 +217,17 @@
     </div>
   </div>
 
-  <!-- Android Sport -->
+  <!-- Workout Customizer -->
   <div class="card">
     <div class="card-header">
-      <h3 class="card-title">Android Sport</h3>
+      <h3 class="card-title" *ngIf="langService.isFr">Planificateur de Sport</h3>
+      <h3 class="card-title" *ngIf="langService.isEn">Workout Customizer</h3>
       <img class="card-icon invert-dark" src="assets/project_icon/sport_icon.png">
     </div>
     <p class="card-desc" *ngIf="langService.isFr">Application android pour former des séances de sport.</p>
     <p class="card-desc" *ngIf="langService.isEn">Android application for creating workout sessions.</p>
     <div class="card-footer">
-      <a href="https://github.com/arnauda-gh/Android-Sport" target="_blank">GitHub →</a>
+      <a href="https://github.com/arnauda-gh/workout-session-customiser" target="_blank">GitHub →</a>
     </div>
   </div>
 

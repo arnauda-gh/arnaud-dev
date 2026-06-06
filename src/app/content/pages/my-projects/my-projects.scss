@@ -71,6 +71,29 @@
   background-color: var(--bg-color);
 }
 
+.card-emoji-icon {
+  font-size: 22px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  user-select: none;
+}
+
+.academic-tag {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background-color: var(--btn-hover-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
 .card-desc {
   font-size: 17px;
   color: var(--text-secondary);
