@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/alwide-site",
+      "destination": "https://alwide-site.vercel.app/alwide-site"
+    },
+    {
+      "source": "/alwide-site/:path*",
+      "destination": "https://alwide-site.vercel.app/alwide-site/:path*"
+    }
+  ]
+}
