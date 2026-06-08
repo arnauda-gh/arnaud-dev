@@ -20,6 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/alwide-site/",
             "outputPath": "dist/my-site",
             "index": "src/index.html",
             "main": "src/main.ts",
