@@ -16,8 +16,10 @@
       <h3 class="card-title" *ngIf="langService.isEn">Scientific Paper</h3>
       <img class="card-icon" src="assets/project_icon/article_scientifique_preview.png">
     </div>
-    <p class="card-desc" *ngIf="langService.isFr">Amélioration d'algorithmes de recherche 2D en utilisant des prédictions mathématiques. Rédaction d'un article scientifique sur les résultats et avancées obtenues.</p>
-    <p class="card-desc" *ngIf="langService.isEn">Improving 2D search algorithms using mathematical predictions. Co-authored a scientific paper on the results and advances achieved.</p>
+    <p class="card-desc" *ngIf="langService.isFr">Amélioration d'algorithmes de recherche 2D en utilisant des
+      prédictions mathématiques. Rédaction d'un article scientifique sur les résultats et avancées obtenues.</p>
+    <p class="card-desc" *ngIf="langService.isEn">Improving 2D search algorithms using mathematical predictions.
+      Co-authored a scientific paper on the results and advances achieved.</p>
     <div class="card-footer">
       <a href="assets/article_scientifique.pdf" target="_blank" *ngIf="langService.isFr">Article →</a>
       <a href="assets/article_scientifique.pdf" target="_blank" *ngIf="langService.isEn">Paper →</a>
@@ -30,9 +32,14 @@
       <h3 class="card-title">Alwide</h3>
       <img class="card-icon invert-dark" src="assets/project_icon/al_icon.png">
     </div>
-    <p class="card-desc" *ngIf="langService.isFr">Éditeur de texte performant en C (autodidacte) : gestion des buffers, coloration syntaxique temps réel, auto-complétion, etc.</p>
-    <p class="card-desc" *ngIf="langService.isEn">High-performance terminal text editor in C (self-taught): buffers management, real-time syntax highlighting, auto-completion, etc.</p>
+    <p class="card-desc" *ngIf="langService.isFr">Éditeur de texte performant en C (autodidacte) : gestion des buffers,
+      coloration syntaxique temps réel, auto-complétion, etc.</p>
+    <p class="card-desc" *ngIf="langService.isEn">High-performance terminal text editor in C (self-taught): buffers
+      management, real-time syntax highlighting, auto-completion, etc.</p>
     <div class="card-footer">
+      <a href="https://alwide.arnaud-dev.fr/" target="_blank" *ngIf="langService.isFr">Site</a>
+      <a href="https://alwide.arnaud-dev.fr/" target="_blank" *ngIf="langService.isEn">Website</a>
+      |
       <a href="https://github.com/arnauda-gh/Alwide" target="_blank">GitHub →</a>
     </div>
   </div>
@@ -44,8 +51,10 @@
       <h3 class="card-title" *ngIf="langService.isEn">Graphical Library</h3>
       <span class="card-emoji-icon">🎨</span>
     </div>
-    <p class="card-desc" *ngIf="langService.isFr">Moteur d'interface graphique complet en C : gestion d'évènements bas niveau, dessin vectoriel et système de widgets. Projet ENSIMAG.</p>
-    <p class="card-desc" *ngIf="langService.isEn">Complete GUI engine in C: low-level event handling, vector drawing, and widget system. ENSIMAG project.</p>
+    <p class="card-desc" *ngIf="langService.isFr">Moteur d'interface graphique complet en C : gestion d'évènements bas
+      niveau, dessin vectoriel et système de widgets. Projet ENSIMAG.</p>
+    <p class="card-desc" *ngIf="langService.isEn">Complete GUI engine in C: low-level event handling, vector drawing,
+      and widget system. ENSIMAG project.</p>
     <div class="card-footer">
       <span class="academic-tag" *ngIf="langService.isFr">Projet Ensimag</span>
       <span class="academic-tag" *ngIf="langService.isEn">Ensimag Project</span>
@@ -59,8 +68,10 @@
       <h3 class="card-title" *ngIf="langService.isEn">Nachos: Micro-Kernel</h3>
       <span class="card-emoji-icon">💻</span>
     </div>
-    <p class="card-desc" *ngIf="langService.isFr">Implémentation multi-threading, ordonnancement, mémoire virtuelle (pagination) et pile réseau sécurisée en C++. Projet ENSIMAG.</p>
-    <p class="card-desc" *ngIf="langService.isEn">Operating system micro-kernel (Nachos) in C++: multi-threading, scheduling, virtual memory (paging), and secure network stack. ENSIMAG project.</p>
+    <p class="card-desc" *ngIf="langService.isFr">Implémentation multi-threading, ordonnancement, mémoire virtuelle
+      (pagination) et pile réseau sécurisée en C++. Projet ENSIMAG.</p>
+    <p class="card-desc" *ngIf="langService.isEn">Operating system micro-kernel (Nachos) in C++: multi-threading,
+      scheduling, virtual memory (paging), and secure network stack. ENSIMAG project.</p>
     <div class="card-footer">
       <span class="academic-tag" *ngIf="langService.isFr">Projet Ensimag</span>
       <span class="academic-tag" *ngIf="langService.isEn">Ensimag Project</span>
@@ -85,14 +96,23 @@
   <div class="card">
     <div class="card-header">
       <h3 class="card-title">DBnary</h3>
-      <svg class="card-icon-svg" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 4.5c-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5-1.45 0-2.99.22-4.28.79C1.49 5.62 1 6.33 1 7.14v11.28c0 1.3 1.22 2.26 2.48 1.94.98-.25 2.02-.36 3.02-.36 1.56 0 3.22.26 4.56.92.6.3 1.28.3 1.87 0 1.34-.67 3-.92 4.56-.92 1 0 2.04.11 3.02.36 1.26.33 2.48-.63 2.48-1.94V7.14c0-.81-.49-1.52-1.22-1.85-1.28-.57-2.82-.79-4.27-.79zM21 17.23c0 .63-.58 1.09-1.2.98-.75-.14-1.53-.2-2.3-.2-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5.92 0 1.83.09 2.7.28.46.1.8.51.8.98v9.47z"></path><path d="M13.98 11.01c-.32 0-.61-.2-.71-.52-.13-.39.09-.82.48-.94 1.54-.5 3.53-.66 5.36-.45.41.05.71.42.66.83-.05.41-.42.71-.83.66-1.62-.19-3.39-.04-4.73.39-.08.01-.16.03-.23.03zM13.98 13.67c-.32 0-.61-.2-.71-.52-.13-.39.09-.82.48-.94 1.53-.5 3.53-.66 5.36-.45.41.05.71.42.66.83-.05.41-.42.71-.83.66-1.62-.19-3.39-.04-4.73.39-.08.02-.16.03-.23.03zM13.98 16.33c-.32 0-.61-.2-.71-.52-.13-.39.09-.82.48-.94 1.53-.5 3.53-.66 5.36-.45.41.05.71.42.66.83-.05.41-.42.7-.83.66-1.62-.19-3.39-.04-4.73.39-.08.02-.16.03-.23.03z"></path></svg>
+      <svg class="card-icon-svg" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M17.5 4.5c-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5-1.45 0-2.99.22-4.28.79C1.49 5.62 1 6.33 1 7.14v11.28c0 1.3 1.22 2.26 2.48 1.94.98-.25 2.02-.36 3.02-.36 1.56 0 3.22.26 4.56.92.6.3 1.28.3 1.87 0 1.34-.67 3-.92 4.56-.92 1 0 2.04.11 3.02.36 1.26.33 2.48-.63 2.48-1.94V7.14c0-.81-.49-1.52-1.22-1.85-1.28-.57-2.82-.79-4.27-.79zM21 17.23c0 .63-.58 1.09-1.2.98-.75-.14-1.53-.2-2.3-.2-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5.92 0 1.83.09 2.7.28.46.1.8.51.8.98v9.47z"></path>
+        <path
+          d="M13.98 11.01c-.32 0-.61-.2-.71-.52-.13-.39.09-.82.48-.94 1.54-.5 3.53-.66 5.36-.45.41.05.71.42.66.83-.05.41-.42.71-.83.66-1.62-.19-3.39-.04-4.73.39-.08.01-.16.03-.23.03zM13.98 13.67c-.32 0-.61-.2-.71-.52-.13-.39.09-.82.48-.94 1.53-.5 3.53-.66 5.36-.45.41.05.71.42.66.83-.05.41-.42.71-.83.66-1.62-.19-3.39-.04-4.73.39-.08.02-.16.03-.23.03zM13.98 16.33c-.32 0-.61-.2-.71-.52-.13-.39.09-.82.48-.94 1.53-.5 3.53-.66 5.36-.45.41.05.71.42.66.83-.05.41-.42.7-.83.66-1.62-.19-3.39-.04-4.73.39-.08.02-.16.03-.23.03z"></path>
+      </svg>
     </div>
-    <p class="card-desc" *ngIf="langService.isFr">Participation à DBnary, projet de recherche. Suite à un stage au LIG.</p>
-    <p class="card-desc" *ngIf="langService.isEn">Participation in DBnary, a research project. Following an internship at LIG.</p>
+    <p class="card-desc" *ngIf="langService.isFr">Participation à DBnary, projet de recherche. Suite à un stage au
+      LIG.</p>
+    <p class="card-desc" *ngIf="langService.isEn">Participation in DBnary, a research project. Following an internship
+      at LIG.</p>
     <div class="card-footer">
-      <a href="https://kaiko.getalp.org/about-dbnary/gaelic-and-catalan-editions-are-now-part-of-dbnary/" target="_blank">Post</a>
+      <a href="https://kaiko.getalp.org/about-dbnary/gaelic-and-catalan-editions-are-now-part-of-dbnary/"
+         target="_blank">Post</a>
       <span class="divider">|</span>
-      <a href="https://gitlab.com/gilles.serasset/dbnary/-/commit/990220776b137863553528a47812062a2a754d69" target="_blank">GitLab →</a>
+      <a href="https://gitlab.com/gilles.serasset/dbnary/-/commit/990220776b137863553528a47812062a2a754d69"
+         target="_blank">GitLab →</a>
     </div>
   </div>
 
@@ -165,8 +185,10 @@
       <span class="divider">GitHub:</span>
       <a href="https://github.com/arnauda-gh/media-synchronizer-Client" target="_blank">Client</a>
       <span class="divider">|</span>
-      <a href="https://github.com/arnauda-gh/media-synchronizer-Server" target="_blank" *ngIf="langService.isFr">Serveur</a>
-      <a href="https://github.com/arnauda-gh/media-synchronizer-Server" target="_blank" *ngIf="langService.isEn">Server</a>
+      <a href="https://github.com/arnauda-gh/media-synchronizer-Server" target="_blank"
+         *ngIf="langService.isFr">Serveur</a>
+      <a href="https://github.com/arnauda-gh/media-synchronizer-Server" target="_blank"
+         *ngIf="langService.isEn">Server</a>
     </div>
   </div>
 
