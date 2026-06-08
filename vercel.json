@@ -2,7 +2,11 @@
   "rewrites": [
     {
       "source": "/alwide-site",
-      "destination": "https://alwide-site.vercel.app/alwide-site"
+      "destination": "https://alwide-site.vercel.app/alwide-site/"
+    },
+    {
+      "source": "/alwide-site/",
+      "destination": "https://alwide-site.vercel.app/alwide-site/"
     },
     {
       "source": "/alwide-site/:path*",
