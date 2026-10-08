@@ -86,7 +86,7 @@
 
 .lang-btn {
   font-weight: 500;
-  font-size: 17px;
+  font-size: 16px;
   padding: 6px 12px;
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
@@ -98,6 +98,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
+}
+
+.lang-flag {
+  width: 19px;
+  height: 14px;
+  border-radius: 2px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 .lang-btn:hover {
@@ -136,6 +147,11 @@
   .lang-btn {
     font-size: 14px;
     padding: 4px 8px;
+    gap: 6px;
+  }
+  .lang-flag {
+    width: 17px;
+    height: 12px;
   }
   .theme-btn {
     font-size: 15px;
@@ -161,6 +177,11 @@
   .lang-btn {
     padding: 4px 6px;
     font-size: 13px;
+    gap: 5px;
+  }
+  .lang-flag {
+    width: 16px;
+    height: 11px;
   }
   .theme-btn {
     padding: 4px 6px;

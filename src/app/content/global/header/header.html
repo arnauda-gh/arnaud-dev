@@ -31,9 +31,15 @@
       <span>{{ themeService.isDark ? '☀️' : '🌙' }}</span>
     </button>
 
-    <button class="lang-btn" (click)="langService.toggleLang()" title="Toggle Language">
-      <span *ngIf="langService.isFr">🇬🇧 EN</span>
-      <span *ngIf="langService.isEn">🇫🇷 FR</span>
+    <button class="lang-btn" (click)="langService.toggleLang()" [title]="langService.isFr ? 'Switch to English' : 'Passer en français'" [attr.aria-label]="langService.isFr ? 'Switch to English' : 'Passer en français'">
+      <ng-container *ngIf="langService.isFr">
+        <img class="lang-flag" src="assets/icon/flag-en.svg" alt="English flag" />
+        <span>EN</span>
+      </ng-container>
+      <ng-container *ngIf="langService.isEn">
+        <img class="lang-flag" src="assets/icon/flag-fr.svg" alt="Drapeau français" />
+        <span>FR</span>
+      </ng-container>
     </button>
   </div>
 </div>
